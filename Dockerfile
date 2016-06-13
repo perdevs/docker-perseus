@@ -18,8 +18,9 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-install pcntl \
 	&& docker-php-ext-install bcmath \
 	&& docker-php-ext-install pdo_mysql \
-	&& docker-php-ext-install mssql \ 
-	&& docker-php-ext-install soap 
+	&& docker-php-ext-install mssql
+	
+RUN docker-php-ext-install soap 
 
 RUN docker-php-ext-install curl 
 
